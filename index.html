@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Хайтек образование</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.1.3/css/bootstrap.min.css">
+    <link rel="icon" href="iconSite.png" type="image/x-icon">
+</head>
+<body>
+
+    <header>
+        <div class = "menu">
+            <div class = "logo">
+                <img src="logo.png" alt="logo">
+                <h2>SmartOlimp</h2>
+            </div>
+            <ul class = "nav">
+                <li><a class="about_section" href="#ID_about">О нас</a></li>
+                <li><a class="technology_section" href="#ID_technology">Технологии</a></li>
+                <li><a class="events_section" href="#ID_events">События</a></li>
+                <li><a class="registration_section" href="#ID_registration">Регистрация</a></li>
+                <li><a class="contacts_section" href="#ID_contacts">Контакты</a></li>
+            </ul>
+        </div>
+    </header> 
+
+    <main>
+
+    <section id="ID_about">
+        <div class="infa_about">
+            <h3>Добро пожаловать в SmartOlimp!</h3>
+            <p>Мы — лидер в организации олимпиад и конкурсов, использующих передовые технологии хайтек-образования. Присоединяйтесь к нам и станьте частью сообщества, где знания и технологии идут рука об руку!</p>
+        </div>
+        <div class="img_about">
+            <img src="female.jfif" alt="female">
+        </div>
+    </section>
+
+    <section id="ID_technology">
+        <h2>Технологии, которые мы используем:</h2>
+        <div class="infa_technology">
+            <div class="technology">
+                <img src="icon1.png" alt="icon1.png">
+                <p>Онлайн-курсы, приложения и платформы</p>
+            </div>
+            <div class="technology">
+                <img src="icon2.png" alt="icon2.png">
+                <p>Виртуальная реальность, симуляторы, интерактивные доски</p>
+            </div>
+            <div class="technology">
+                <img src="icon3.png" alt="icon3.png">
+                <p>Алгоритмы и искусственный интеллект</p>
+            </div>
+            <div class="technology">
+                <img src="icon4.png" alt="icon4.png">
+                <p>Традиционные методы обучения с онлайн-форматами</p>
+            </div>
+            <div class="technology">
+                <img src="icon5.png" alt="icon5.png">
+                <p>Разработка и реализация проектов</p>
+            </div>
+            <div class="technology">
+                <img src="icon6.png" alt="icon6.png">
+                <p>Обмен знаниями между людьми из разных регионов</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="ID_events">
+        <h2> Наши события:</h2>
+        <div class="Events">
+        <div class="event">
+        <img src="1.jpg" alt="1.jpg">
+        <p class="description_event">Олимпиада по программированию<br> Дата: 15.01.2024. <br>Место: Школа №5.<br> <a href="">Подробнее</a></p>
+        </div>
+        <div class="event">
+        <img src="2.jpg" alt="2.jpg">
+        <p class="description_event">Митап о высоких технологий<br> Дата: 15.01.2024. <br>Место: Технопарк.<br> <a href="">Подробнее</a></p>
+        </div>
+        <div class="event">
+        <img src="3.jpg" alt="3.jpg">
+        <p class="description_event">Конкурс идей для стартапов <br>Дата: 20.02.2024. <br>Место: Технопарк.<br> <a href="">Подробнее</a></p>
+        </div>
+
+    </section>
+    <section id="ID_registration">
+        <div class="rob">
+            <img src="rob.png" alt="rob.png">
+            <p>Пожалуйста, оставьте заявку, если <br>хотите принять участие<br> в мероприятии.</p>
+        </div>
+    <form class="RegistrForm">
+
+        <div class="regHeader">
+            <h1>Регистрация<br> на событие</h1>
+        </div>
+
+        <div class="input-group">
+            <label for="surname">Ваша фамилия:</label>
+            <input type="text" id="surname" placeholder="Введите фамилию" required>
+        </div>
+
+        <div class="input-group">
+            <label for="name">Ваше имя:</label>
+            <input type="text" id="name" placeholder="Введите имя" required>
+        </div>
+
+        <div class="input-group">
+            <label for="email">Ваша почта:</label>
+            <input type="email" id="email" placeholder="Введите почту" required>
+        </div>
+ 
+        <div class="input-group">
+            <label for="event_choices">Выберете событие:</label>
+            <select name="event_choices" id="event_choices" required>
+                <option value="olimp">Олимпиада</option>
+                <option value="meetup">Митап</option>
+                <option value="konkurs">Конкурс</option>
+            </select>
+        </div>
+
+        <div class="regButtons">
+            <button type="submit">Зарегистрироваться</button>
+            <button type="reset">Очистить форму</button>
+        </div>
+
+    </form>
+    </section>
+
+    </main>
+
+    <footer id="ID_contacts">
+    <div class="footer_content">
+        <div class="logo">
+            <img src="logo.png" alt="logo">
+            <h2>SmartOlimp</h2>
+        </div>
+        <div class="footer_links">
+            <ul class="social_icons">
+                <li><a href="#"><img src="vk.png" alt="Вконтакте"></a></li>
+                <li><a href="#"><img src="ok.png" alt="Одноклассники"></a></li>
+                <li><a href="#"><img src="tg.png" alt="Телеграмм"></a></li>
+            </ul>
+            <a href="mailto:info@smartolimp.ru" class="email_link">info@smartolimp.ru</a>
+        </div>
+        <div class="scroll_button_up">
+            <a href="#ID_about"><img src="strelka.png" alt="strelka"></a>
+        </div>
+    </div>
+    <p>©️ 2024 Все права защищены.</p>
+</footer>
+
+<div id="modal" class="modal">
+    <div class="modal-content">
+        <span class="close-button">&times;</span>
+        <h2>Выберите событие</h2>
+        <ul id="modal-list">
+            <li data-value="olimp">Олимпиада</li>
+            <li data-value="meetup">Митап</li>
+            <li data-value="konkurs">Конкурс</li>
+        </ul>
+        <button id="confirm-selection">Подтвердить</button>
+    </div>
+</div>
+
+
+<script> 
+// Получаем элементы
+const modal = document.getElementById("modal");
+const select = document.getElementById("event_choices");
+const closeButton = document.querySelector(".close-button");
+const confirmButton = document.getElementById("confirm-selection");
+const modalItems = document.querySelectorAll("#modal-list li");
+
+// Открытие модального окна при нажатии на select
+select.addEventListener("click", function() {
+    modal.style.display = "block";
+});
+
+// Закрытие модального окна
+closeButton.addEventListener("click", function() {
+    modal.style.display = "none";
+});
+
+// Закрытие модального окна при нажатии вне его
+window.addEventListener("click", function(event) {
+    if (event.target === modal) {
+        modal.style.display = "none";
+    }
+});
+
+// Подтверждение выбора из модального окна и закрытие его
+confirmButton.addEventListener("click", function() {
+    modal.style.display = "none"; // Закрываем модальное окно
+});
+
+// Добавляем обработчики для каждого элемента списка
+modalItems.forEach(item => {
+    item.addEventListener("click", function() {
+        const selectedOption = this.getAttribute('data-value'); // Получаем значение data- атрибута
+        select.value = selectedOption; // Устанавливаем выбранное значение в оригинальном select
+        
+        // Удаляем выделение с других элементов
+        modalItems.forEach(i => i.classList.remove('selected'));
+        
+        // Добавляем выделение к текущему элементу
+        this.classList.add('selected');
+    });
+});
+
+ </script>
+</body>
+</html>

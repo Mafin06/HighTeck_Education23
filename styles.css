@@ -1,0 +1,814 @@
+@keyframes background-animation {
+    0% {
+        background-size: 100%;
+    }
+    50% {
+        background-size: 130%; /* Увеличиваем фон на 10% */
+    }
+    100% {
+        background-size: 100%;
+    }
+}
+
+html{
+    scroll-behavior: smooth;
+}
+body {
+    background-image: url("back2.jpg");
+    background-size: cover; /* лучшее отображение фона */
+    background-color: rgb(153, 0, 255);
+    background-attachment: fixed; /* зафиксировать чтобы не шевелились */
+    background-position: fixed;
+    background-position: center; /* Центрируем фон */
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 24px;
+    margin: 0; /* Убираем отступы у body */
+    color: #fff;
+
+    display: flex; /* Добавляем флекс-контейнер */
+    flex-direction: column; /* Вертикальное выравнивание */
+    align-items: center; /* Центровка по горизонтали */
+
+    animation: background-animation 10s infinite; /* Задаем анимацию */
+    /*background-repeat: no-repeat; /* Отключить повторение фона */
+    
+
+}
+
+main {
+    flex: 1; /* Это позволит главному содержимому занимать все доступное пространство между шапкой и футером */
+}
+
+* {
+    box-sizing: border-box; /* Это применит box-sizing ко всем элементам */
+}
+
+
+.nav {
+    list-style: none; /* убирает точки */
+    padding: 5px 25px; /* внутренние отступы */
+}
+
+ul.nav li {
+    display: inline; /* элементы списка горизонтально */
+    margin-left: 15px;
+    margin-right: 15px; /* отступы между пунктами меню */
+}
+
+ul.nav a {
+    text-decoration: none; /* убирает подчеркивание ссылок */
+    color: #f4f4f4;
+    transition: all ease-in-out 0.2s;
+}
+
+header {
+    display: flex;
+    align-items: center;
+}
+
+ul.nav a:hover {
+    /*color: rgb(204, 39, 255);*/
+    font-size: 26px;
+}
+
+.menu {
+    top: 0; /* ЧТОБЫ НАВЕРХУ БЫЛ */
+    left: 0;
+    border: 2px solid rgba(255, 255, 255, 0.582);
+    background-color: rgba(255, 255, 255, 0.1); /* Исправлено на rgba */
+    position: fixed;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.247);
+    width: 100%;
+    height: auto;
+    display: flex; /* Используем flexbox для размещения элементов */
+    align-items: center; /* Выравнивание по вертикали */
+    justify-content: space-between; /* Размещаем элементы по краям */
+    color: #fff;
+    border-bottom-left-radius: 60px;
+    border-bottom-right-radius: 60px;
+    z-index: 10; /* Придаём меню высокий порядок z, чтобы оно оставалось на переднем плане */
+    flex-wrap: wrap;
+}
+
+.logo img {
+    width: 100px;
+    height: auto;
+    margin: 10px 10px 10px 50px;
+    filter: drop-shadow(0 0 20px #ffffffea);
+
+    
+}
+
+.logo {
+    display: flex; /* Используем flexbox для выравнивания логотипа и текста */
+    align-items: center; /* Вертикальное выравнивание */
+    margin-left: 50px; /* Отступы слева, если нужно */
+    margin-top: 10px;
+    margin-bottom: 10px;
+    
+}
+
+.logo h2 {
+    margin-left: 15px;
+    text-shadow: 0 0 20px #ffffff;
+}
+
+section {
+    margin: 40px 0; /* Задайте отступ сверху и снизу в 40 пикселей */
+    padding: 30px; /* Опционально: добавьте внутренний отступ для содержимого */
+    /*border: 2px solid #ffffff;  /*Опционально: добавьте рамку для обозначения секций */
+    /*background-color: #f9f9f931;/*  Опционально: добавьте цвет фона для секций */
+    border-radius: 45px; /* Опционально: закруглите углы */
+    max-width: 1000px; /* Ограничиваем максимальную ширину секций */
+    margin-left: auto; /* Центрировать секцию по горизонтали */
+    margin-right: auto; /* Центрировать секцию по горизонтали */
+    text-align: left;
+}
+
+#ID_about{
+    margin-top: 350px;
+    display: flex; /* Использовать flex внутри секций */
+    justify-content: center; /* Центровка содержимого по горизонтали */
+    /*flex-wrap: wrap;*/
+}
+
+#ID_technology {
+    margin-top: 5px;
+    display: flex; /* Использовать flex внутри секций */
+    justify-content: center; /* Центровка содержимого по горизонтали */
+    align-items: center; /* Центровка содержимого по вертикали */
+    flex-wrap: wrap; /* Позволяет оборачивать элементы  ВЕРТИКААААЛЬ */
+    width: 1000px;
+}
+
+.infa_about {
+    background-color: #0000001e; 
+    border-radius: 45px;
+    width: 400px;
+    min-height: 400px;
+    padding: 10px 30px; /* Упрощенное значение */
+    margin: 30px; /* Убираем лишние отступы */
+    border: 2px solid rgba(255, 255, 255, 0.582);
+    backdrop-filter: blur(10px);
+    z-index: 3;
+}
+
+.img_about img {
+    border-radius: 45px;
+    width: 450px;
+    height: auto; /* Устанавливаем авто высоту */
+    margin-left: -180px;
+    margin-top: -150px;
+    border: 2px solid rgba(255, 255, 255, 0.582);
+    z-index: 1;
+}
+
+.infa_technology {
+    display: flex; /* Используем flexbox для размещения внутри */
+    flex-wrap: wrap; /* Элементы могут оборачиваться */
+    justify-content: center; /* Центрируем по горизонтали */
+}
+
+#ID_technology h2{
+    margin-bottom: 50px;
+}
+
+#ID_events h2{
+    margin-bottom: 70px;
+}
+.technology {
+    background-color: #0000001e;
+    border-radius: 45px;
+    border: 2px solid rgba(255, 255, 255, 0.582);
+    backdrop-filter: blur(10px);
+    margin: 20px;
+    padding: 20px 30px; /* Упрощенное значение */
+    width: 220px;
+    min-height: 190px;
+    display: flex;
+    flex-direction: column; /* Вертикальное расположение контента */
+    align-items: center; /* Центрирование контента */
+    text-align: center;
+}
+
+#ID_events{
+    margin-top: 5px;
+    display: flex; /* Использовать flex внутри секций */
+    justify-content: center; /* Центровка содержимого по горизонтали */
+    align-items: center; /* Центровка содержимого по вертикали */
+    flex-wrap: wrap; /* Позволяет оборачивать элементы  ВЕРТИКААААЛЬ */
+}
+
+.Events{
+    display: flex; /* Используем flexbox для размещения внутри */
+    justify-content: center; /* Центрируем по горизонтали */
+    align-items: flex-start; /* Выравнивание по верхнему краю */
+    flex-wrap: wrap;
+    gap: 10px;
+    position: relative;
+}
+
+.description_event{
+    position: absolute;
+    flex-wrap: wrap;
+    bottom: 0;
+    background: #00000075;
+    border: 2px solid rgba(255, 255, 255, 0.582);
+    padding: 25px;
+    border-radius: 0 0 45px 45px ;
+    backdrop-filter: blur(10px);
+    color: #fff;
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity .2s, visibility .2s;
+
+    width: 100%; /* Установите ширину в 100% */
+    /* Можно добавить max-width для ограничения */
+    max-width: 300px; /* Ограничение в зависимости от ширины карточки события */
+    height: auto; /* Измените на auto для автоматической высоты */
+    margin: 0; /* Убираем лишние отступы */
+
+}
+
+.event:hover .description_event {
+    visibility: visible;
+    opacity: 1;
+}
+
+.event{
+    position: relative;
+    /*background-color: #00000070;
+    border-radius: 45px;
+    border: 2px solid rgba(255, 255, 255, 0.582);*/
+    padding: 10px;
+    margin: 0px; /* Отступ между событиями */
+    display: flex;
+    flex-direction: column; /* Вертикальное расположение контента */
+    align-items: center; /* Центрирование контента */
+    width: 300px; /* Задайте ширину для каждой карточки события */
+    min-height: 300px; /* Задайте минимальную высоту для каждой карточки события */
+    transition: transform 0.5s ease; /* Для плавной анимации при изменении размера */
+    overflow: hidden; /* Чтобы скрывать часть описания, выходящую за пределы */
+}
+
+.event img{
+    background-size: cover;
+    border-radius: 45px;
+    padding: 0px;
+    width: 250px;
+    min-height: 400px;
+    height: auto; /* Устанавливаем авто высоту */
+    border: 2px solid rgba(255, 255, 255, 0.582);
+    object-fit: 10px;
+    transition: all ease-in-out 0.5s;
+}
+
+.event:hover img{
+    width: 300px;
+}
+
+.event a{
+    color: rgb(44, 136, 255);
+    text-decoration: none;
+    transition: all ease-in-out 0.5s;
+}
+
+.event a:hover{
+    text-decoration: underline;
+}
+#ID_registration {
+    display: flex;
+    position: relative;
+}
+
+#ID_registration img {
+    width: 500px;
+    border-radius: 45px 0 0 45px; /* Изменено: объединение радиусных углов */
+    z-index: 1;
+    margin-top: 115px;
+    border: 2px solid rgba(255, 255, 255, 0.582);
+    position: relative;
+    background-size: cover;
+}
+
+.rob {
+    position: relative; /* Убедитесь, что у .rob установлен relative */
+    display: flex; /* По желанию: выравнивание по вертикали */
+    flex-direction: column; /* Для вертикального размещения */
+    z-index: 1;
+}
+.rob p{
+    position: absolute;
+    background-color: #0000006c;
+    border: 2px solid rgba(255, 255, 255, 0.582);
+    padding: 20px;
+    width: 500px;
+    border-radius: 0px 0 0 45px;
+    margin-bottom: 100px;
+    z-index: 4;
+    top: 58%; /* Настройте это значение, чтобы переместить текст вверх или вниз */
+    left: 0%; /* Центрирует текст по горизонтали */
+
+}
+
+.RegistrForm {
+    border: 2px solid rgba(255, 255, 255, 0.582);
+    border-radius: 45px; 
+    padding: 20px; /* Изменено отступ для лучшего выравнивания */
+    width: 550px;
+    background-image: url("reg.jpg");
+    filter: brightness(10px);
+    /*background-color: rgb(132, 43, 248);*/
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch; /* Обеспечить растяжение элементов по ширине контейнера */
+    justify-content: space-between; /* Обеспечить равномерное распределение пространства между элементами */
+    z-index: 5;
+}
+
+.input-group {
+    display: flex;
+    flex-direction: column;
+    margin: 10px; 
+
+}
+
+.input-group label {
+    margin-bottom: 15px; /* Добавляем отступы между меткой и полем ввода */
+}
+
+.RegistrForm input,
+.RegistrForm select {
+    width: 100%; /* Поля ввода занимают всю доступную ширину своего контейнера */
+    border-radius: 20px;
+    border: 1px solid #ccc;
+    padding: 10px; /* Добавлен отступ для удобства */
+    box-sizing: border-box; /* Учитывать padding при определении ширины */
+}
+
+.regButtons {
+    display: flex;
+    justify-content: space-between; /* Распределить кнопки по ширине */
+    margin-top: 20px;
+    
+}
+
+.regButtons button {
+    width: 48%; /* Сделать кнопки почти равными по ширине */
+    padding: 10px; /* Добавить padding для кнопок */
+    border-radius: 30px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s; /* Плавный переход для фона */
+    color: #fff;
+    background-color: #0000006c;
+    border: 2px solid rgba(255, 255, 255, 0.582);
+    margin: 10px; 
+
+    font-size: 14px; 
+}
+
+.regButtons button:hover {
+    background-color: rgb(44, 136, 255); /* Добавлено: изменение фона при наведении */
+}
+
+input, select:focus {
+    outline: none;
+}
+
+.regHeader h1{
+    text-align: center;
+}
+footer {
+    margin: 0;
+    border: 2px solid #ffffff;  
+    background-color: #f9f9f931; 
+    border-radius: 45px 45px 0 0; 
+    width: 100%; 
+    height: auto;
+    text-align: center; /* Центрируем текст для дальнейшей работы */
+    flex-wrap: wrap;
+
+}
+
+.footer_content {
+    display: flex; /* Используем flexbox для выравнивания по горизонтали */
+    align-items: center; /* Центрируем по вертикали */
+    justify-content: space-between; /* Размещаем элементы по краям */
+    padding: 0 20px;
+}
+
+.footer_logo {
+    display: flex; /* Используем flexbox для логотипа */
+    align-items: center;
+}
+
+.footer_logo img {
+    margin-right: 10px; /* Отступ между иконкой и текстом */
+    flex-wrap: wrap;
+}
+
+.footer_links {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Выравнивание по правому краю */
+    margin-left: -250px;
+    flex-wrap: wrap;
+
+    padding: 0 0 0 175px;
+    
+}
+
+.social_icons {
+    list-style: none; /* Убираем точки у списка */
+    padding: 0; /* Убираем внутренние отступы */
+    display: flex; /* Используем flexbox для размещения иконок */
+    gap: 15px; /* Отступ между иконками */
+    flex-wrap: wrap;
+}
+
+.social_icons li {
+    display: inline; /* Иконки в строку */
+    flex-wrap: wrap;
+}
+
+.social_icons img {
+    width: 40px; /* Ширина иконок */
+    height: auto; /* Авто высота */
+    transition: all ease-in-out 0.2s;
+    flex-wrap: wrap;
+}
+
+.email_link {
+    color: #ffffff; /* Цвет ссылки */
+    text-decoration: none; /* Убираем подчеркивание */
+    margin-top: 5px; /* Отступ сверху */
+    font-size: 24px; /* Размер шрифта для ссылки */
+    transition: all ease-in-out 0.2s;
+    flex-wrap: wrap;
+}
+
+.email_link:hover {
+    transform: scale(120%);
+}
+footer p {
+    margin-top: 20px; /* Отступ сверху для текста ©️ */
+    flex-wrap: wrap;
+}
+
+.social_icons img:hover{
+    transform: scale(120%);
+}
+
+.RegistrForm select option {
+    background-color: rgb(215, 55, 255); /* Цвет фона для опций */
+    color: #fff; /* Цвет текста для опций */
+    padding: 10px; /* Отступы вокруг текста */
+    display: none;
+    opacity: 0;
+}
+
+.RegistrForm select option:hover {
+    background-color: rgb(44, 136, 255); /* Цвет фона при наведении */
+    color: #000; /* Цвет текста при наведении */
+}
+
+/*окно со списком*/
+
+.modal {
+    display: none; /* Скрыто по умолчанию */
+    position: fixed; /* Остается на месте */
+    z-index: 1000; /* На переднем плане */
+    left: 0;
+    top: 0;
+    width: 100%; /* Полная ширина */
+    height: 100%; /* Полная высота */
+    overflow: auto; /* В случае, если содержимое превышает высоту */
+    background-color: rgba(0, 0, 0, 0.39); /* Полупрозрачный  фон */
+    backdrop-filter: blur(5px);
+    transition: all ease-in-out 0.5s;
+}
+
+.modal-content {
+    background-color: #ffffff34;
+    margin: 15% auto; /* Центрирование */
+    padding: 30px;
+    border: 2px solid rgba(255, 255, 255, 0.582);
+    width: 80%; /* Ширина окна */
+    max-width: 400px; /* Максимальная ширина */
+    border-radius: 45px;
+    backdrop-filter: blur(100%);
+}
+
+.close-button {
+    color: #ffffff;
+    float: right;
+    font-size: 40px;
+    font-weight: bold;
+}
+
+.close-button:hover,
+.close-button:focus {
+    color: rgb(44, 136, 255);
+    text-decoration: none;
+    cursor: pointer;
+}
+
+#modal-list {
+    max-height: 200px; /* Максимальная высота для прокрутки */
+    overflow-y: auto; /* Включает вертикальную прокрутку */
+    padding: 0; /* Убирает внутренние отступы */
+    margin: 10px 0; /* Отступы сверху и снизу */
+    list-style-type: none; /* Убирает маркеры списка */
+}
+
+#modal-list li {
+    padding: 10px; /* Отступы для элементов списка */
+    cursor: pointer; /* Указатель при наведении */
+    background-color: rgba(241, 241, 241, 0.384); /* Цвет фона элементов списка */
+    margin: 5px 0; /* Отступы между элементами */
+    border-radius: 20px; /* Скругление углов */
+    transition: background-color 0.3s; /* Плавный переход для фона */
+}
+
+#modal-list li:hover {
+    background-color: rgba(255, 32, 255, 0.301); /* Изменение цвета фона при наведении */
+}
+
+#confirm-selection{
+        width: 48%; 
+        padding: 10px; /* Добавить padding для кнопок */
+        border-radius: 20px;
+        border: none;
+        cursor: pointer;
+        transition: background-color 0.3s; /* Плавный переход для фона */
+        color: #fff;
+        background-color: #0000003f;
+        border: 2px solid rgba(255, 255, 255, 0.582);
+        margin: 10px; 
+        margin-left: 85px;
+    
+}
+
+#confirm-selection:hover {
+    background-color: rgba(44, 135, 255, 0.712); /* Добавлено: изменение фона при наведении */
+}
+
+#modal-list li.selected {
+    background-color: rgba(255, 32, 255, 0.377); /* Цвет для выделенного элемента */
+    color: #fff; /* Цвет текста выделенного элемента */
+}
+
+.modal-content h2{
+    text-shadow: 0 0 20px #ffffff;
+}
+
+.scroll_button_up img{
+    filter: drop-shadow(0 0 20px #ffffffea);
+    width: 80px;
+    height: auto;
+    padding: 5px;
+    margin-right: 50px;
+    margin-top: 20px;
+    margin-left: 230px;
+    transition: all ease-in-out 0.2s;
+
+}
+
+.scroll_button_up img:hover {
+    transform: scale(120%);
+}
+/*тут типо адаптация под мобильные устройства будет*/
+/* Мобильная версия */
+@media (max-width: 1900px) {
+    body{
+        animation: none;}
+    }
+    @media (max-width: 1900px) {
+        .footer_links{
+            margin-left: 0;
+            margin-right: 0;}
+        }
+@media (max-width: 780px) {
+
+    body{
+        animation: none;
+        font-size: 14px;
+        margin-right: 0 ;
+    }
+    
+    .menu .logo img{
+        width: 50px;
+    }
+    .logo img{
+        width: 50px;
+        padding: auto;
+    }
+    
+    .logo{
+        align-items: center;
+        text-align: center;
+        margin-top: 0;
+        margin-bottom: 0;
+        padding: 0;
+        justify-content: center;
+    }
+
+    .menu {
+        align-items: center; /* Центрировать элементы меню */
+        padding: 0px; /* Уменьшить внутренние отступы */
+        justify-content: center;
+        padding-top: 10px;
+    }
+
+    ul.nav li {
+        margin: 10px; /* Отступы между пунктами меню */
+    }
+
+    ul.nav a {
+        font-size: 14px; /* Уменьшить шрифт ссылок навигации */
+    }
+
+    h3 {
+        font-size: 16px; /* Уменьшение шрифта заголовков h3 */
+    }
+
+    h2 {
+        font-size: 20px; 
+    }
+
+    section {
+        flex-direction: column; /* Вертикальное размещение в секциях */
+        padding: 20px 0; /* Уменьшение отступов */
+        margin: 20px; /* Уменьшение отступа */
+        align-items: center;
+        margin-right: 0 ;
+        width: 100%;
+        height: auto;
+        /*background-color: #000000cb; */
+    }
+
+    .img_about{
+        margin-left: 30px;
+        margin-top: -350px;;
+        padding: 0;
+        margin-right: 0;
+
+    }
+
+    .img_about img{
+        width: 250px;
+        margin-left: 0px;
+        margin-right: 0;
+    }
+
+    .infa_about{
+        /*width: 320px;*/
+        min-height: 300px;
+        width: 250px;
+        margin-right: 0;
+    }
+    #ID_about{
+        margin-bottom: 270px;
+        margin-top: 300px;
+        padding-left: 0;
+        padding-right: 0;
+        margin-left: 0;
+        padding-bottom: 30px;
+        align-items: center;
+        margin-right: 0;
+
+    }
+
+    #ID_technology, #ID_events {
+        display: flex;
+        flex-direction: column; /* Вертикальное расположение технологий и событий */
+        align-items: center; /* Центрировать */
+        padding: 0;
+        margin: 0;
+        margin-top: 15px;
+        width: 100%; /* Занять 100% ширины */
+        
+    }
+
+    #ID_technology{
+        text-align: center;
+    }
+    
+    .event {
+        width: 100%; /* Уменьшить ширину элементов */
+        margin: 0;
+    }    
+
+    #ID_technology h2{
+        width: 50%;
+    }
+    .technology{
+        width: 60%; /* Уменьшить ширину элементов */
+        margin: 10px; /* Добавить отступы между элементами */
+    }
+
+    .technology img{
+        width: 40px;
+    }
+
+
+    #ID_registration {
+        display: flex;
+        justify-content: center;
+        flex-direction: column; /* Вертикальное размещение */
+        align-items: center; /* Центрируем контейнер */
+        margin-right: 0;
+        padding-left: 0;
+        padding-right: 0;
+        margin-left: 0;
+        width: 100%;
+
+    }
+
+    #ID_registration img {
+        width: 100%; /* Изменить ширину изображения */
+        border-radius: 45px; /* Углы остаются закругленными */
+        margin-bottom: 15px; /* Добавить отступ снизу */
+        margin-right: 0;
+    }
+
+    .RegistrForm {
+        width: 90%; /* Уменьшить ширину формы */
+        margin: 0;/*ТУТ ИЗМЕНЕНА ЛЕВАЯ ПРОЛЕМА НА ПРАВУЮ*/
+
+        
+    }
+
+    .rob p{
+        height: 235px;
+        width: 100%;
+        margin-top: 25px;
+        border-radius: 0;
+        margin-right: 0;
+        padding-top: 10px;
+
+    }
+
+    .rob{
+        display: flex; /* Используем флекс для центрирования */
+        flex-direction: column; /* Вертикальное размещение */
+        align-items: center;
+        width: 90%;
+        margin-bottom: -70px;
+        margin-right: 0;
+        
+    }
+
+    footer {
+        flex-direction: column; /* Вертикальное размещение элементов в футере */
+        align-items: center; /* Центрированное размещение */
+        width: 100%; /* Устанавливаем ширину футера 100% */
+        padding: 20px; /* Увеличиваем отступы для мобильных */
+        margin: 0;
+        font-size: 20px;
+    }
+
+    .footer_content {
+        flex-direction: column; /* Вертикальное размещение элементов в футере */
+        align-items: center; /* Центрирование */
+        margin: 0;
+        justify-content: center;
+        width: 100%;
+        padding: 0;
+        
+    }
+
+    
+    .regButtons button {
+        width: 100%; /* Кнопки занимают всю ширину */
+        margin: 10px; /* Отступы между кнопками */
+    }
+    
+    .footer_links, .scroll_button_up img{
+        margin: 0;
+        padding: 10px;
+    }
+
+    .logo{
+        margin: 0;
+        padding: 0px;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .logo img{
+        margin: 10px 0;
+        
+    }
+    
+    .scroll_button_up img{
+        width: 70px;
+    }
+    
+    .social_icons img{
+        width: 40px;
+    }
+}
